@@ -1,21 +1,17 @@
 <template>
-  <div>
-    <h5>블로그 글 제목</h5>
-    <p>블로그 글 날짜</p>
+  <div v-for="(a,i) in blog" :key="i">
+    <h5>{{a.title}}</h5>
+    <p>{{a.date}}</p>
   </div>
-  <div>
-    <h5>블로그 글 제목</h5>
-    <p>블로그 글 날짜</p>
-  </div>
-  <div>
-    <h5>블로그 글 제목</h5>
-    <p>블로그 글 날짜</p>
-  </div>  
 </template>
 
 <script>
+// import blog from '../assets/blog.js'
 export default {
-    name: 'List'
+    name: 'List',
+    props:{
+      blog:Array
+    }
 }
 </script>
 

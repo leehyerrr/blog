@@ -44,15 +44,21 @@
   <h5>린린린</h5>
   <p>s222</p>
 </div>
-<List />
+<List :blog=Blog />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import List from './components/List.vue'
+import Blog from './assets/blog.js'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      Blog : Blog
+    }
+  },
   // components: {
   //   HelloWorld
   // }
