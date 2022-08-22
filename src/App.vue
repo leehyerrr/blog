@@ -40,16 +40,21 @@
     </div>
   </div>
 </nav>
-<div class="container" style="margin-top:70px">
-  <h5>린린린</h5>
-  <p>s222</p>
-</div>
-<List :blog=Blog />
+
+<nav style="margin-top:70px">
+  <p><router-link to="/">Home</router-link></p>
+  <p><router-link to="/list">List</router-link></p>
+  <p><router-link to="/detail">Detail</router-link></p>
+</nav>
+
+<!-- <router-view></router-view> -->
+<!-- <List :blog=Blog /> -->
+<router-view :blog=Blog></router-view>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import List from './components/List.vue'
+// import List from './components/List.vue'
 import Blog from './assets/blog.js'
 
 export default {
@@ -63,7 +68,7 @@ export default {
   //   HelloWorld
   // }
   components : {
-    List : List
+    // List : List
   }
 }
 </script>

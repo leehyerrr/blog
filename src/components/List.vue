@@ -1,6 +1,6 @@
 <template>
-  <div v-for="(a,i) in blog" :key="i">
-    <h5>{{a.title}}</h5>
+  <div v-for="(a,i) in blog" :key="i" style="margin-top:70px">
+    <h5 @click="$router.push('/detail/'+i)">{{a.title}}</h5>
     <p>{{a.date}}</p>
   </div>
 </template>
